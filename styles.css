@@ -37,3 +37,7 @@
 .black-key:hover {
     background-color: #555;
 }
+
+.pressed {
+    background-color: #ccc;
+}

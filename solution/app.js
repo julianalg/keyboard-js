@@ -396,3 +396,20 @@ highC.addEventListener("click", function (event) {
     const audio = new Audio("src/c.mp3");
     audio.play();
 });
+
+document.addEventListener("keydown", function (event) {
+    const key = event.key;
+    const keyElement = document.getElementById(key);
+    if (keyElement) {
+        keyElement.classList.add("pressed");
+        document.getElementById("last-key-pressed").textContent = `Last key pressed: ${key}`;
+    }
+});
+
+document.addEventListener("keyup", function (event) {
+    const key = event.key;
+    const keyElement = document.getElementById(key);
+    if (keyElement) {
+        keyElement.classList.remove("pressed");
+    }
+});
